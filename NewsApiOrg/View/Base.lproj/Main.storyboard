@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d1W-hJ-BMJ">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News Articles-->
+        <scene sceneID="JPP-77-rHA">
+            <objects>
+                <viewController id="g9L-MX-lKr" customClass="NewsFeedViewController" customModule="NewsApiOrg" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vUY-wl-oaz">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Ka-zk-9cR">
+                                <rect key="frame" x="0.0" y="88" width="428" height="877"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="331" id="PzF-7f-ITD" customClass="NewsFeedTableViewCell" customModule="NewsApiOrg" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="331"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PzF-7f-ITD" id="8Al-uO-ev6">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="331"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yT9-uZ-a6w">
+                                                    <rect key="frame" x="70" y="17.666666666666657" width="288" height="296"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaF-Hs-LA7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="33"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="288" id="X9j-gw-99E"/>
+                                                                <constraint firstAttribute="height" constant="33" id="Yse-Ov-5gp"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dHg-GX-Xn6">
+                                                            <rect key="frame" x="0.0" y="41" width="288" height="173"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="173" id="8mn-xr-fLK"/>
+                                                                <constraint firstAttribute="width" constant="288" id="Nr8-UG-f77"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0rF-eg-mwT">
+                                                            <rect key="frame" x="0.0" y="222" width="288" height="74"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ru-LX-8oC">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="33"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="33" id="TQ7-me-lYl"/>
+                                                                        <constraint firstAttribute="width" constant="288" id="rMk-df-sSD"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="12"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Published at:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyS-dO-wVI">
+                                                                    <rect key="frame" x="0.0" y="41.000000000000028" width="288" height="33"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="288" id="WgX-ea-wFd"/>
+                                                                        <constraint firstAttribute="height" constant="33" id="dr1-ST-oXs"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="12"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yT9-uZ-a6w" firstAttribute="centerX" secondItem="8Al-uO-ev6" secondAttribute="centerX" id="axE-25-DaP"/>
+                                                <constraint firstItem="yT9-uZ-a6w" firstAttribute="centerY" secondItem="8Al-uO-ev6" secondAttribute="centerY" id="vto-m7-Yl7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="articleImage" destination="dHg-GX-Xn6" id="ScA-2J-uUK"/>
+                                            <outlet property="dateLabel" destination="GyS-dO-wVI" id="LdO-lD-QfU"/>
+                                            <outlet property="descriptionLabel" destination="4Ru-LX-8oC" id="Guc-jq-Vra"/>
+                                            <outlet property="titleLabel" destination="FaF-Hs-LA7" id="ngw-8w-KrS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xb9-pU-dgV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xb9-pU-dgV" firstAttribute="trailing" secondItem="6Ka-zk-9cR" secondAttribute="trailing" id="2yV-EB-kpp"/>
+                            <constraint firstItem="6Ka-zk-9cR" firstAttribute="top" secondItem="xb9-pU-dgV" secondAttribute="top" id="HiA-sC-O4C"/>
+                            <constraint firstItem="6Ka-zk-9cR" firstAttribute="leading" secondItem="xb9-pU-dgV" secondAttribute="leading" id="j7O-So-0Yb"/>
+                            <constraint firstItem="xb9-pU-dgV" firstAttribute="bottom" secondItem="6Ka-zk-9cR" secondAttribute="bottom" constant="-73" id="o86-7h-y3x"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="News Articles" id="h7c-Aw-uTb"/>
+                    <connections>
+                        <outlet property="tableViewOutlet" destination="6Ka-zk-9cR" id="imQ-7h-pX4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YaB-Ur-rZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295.625" y="12.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tfg-Ph-Cy8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d1W-hJ-BMJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XJV-IB-9Jj">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="g9L-MX-lKr" kind="relationship" relationship="rootViewController" id="kcT-MH-EYB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7jh-M3-fNW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448.59813084112147" y="12.958963282937367"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
