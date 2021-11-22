@@ -72,16 +72,6 @@ class DetailViewController: UIViewController {
         self.savedItems.append(newItem)
         saveData()
     }
-        
-        /*let entity = NSEntityDescription.entity(forEntityName: "Items", in: self.managedObjectContext!)
-        let myNews = NSManagedObject(entity: entity!, insertInto: self.managedObjectContext)
-        
-        // Setting values to CoreData
-        myNews.setValue(newsImage, forKey: "image")
-        myNews.setValue(contentString, forKey: "newsContent")
-        myNews.setValue(titleString, forKey: "newsTitle")
-        myNews.setValue(webUrlString, forKey: "url")
-    }*/
     
     // MARK: - Navigation
 
