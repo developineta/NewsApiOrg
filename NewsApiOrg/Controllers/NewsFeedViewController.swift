@@ -43,7 +43,7 @@ class NewsFeedViewController: UIViewController {
             }
         }
     }
-
+    
     func handleGetData(){
         activityIndicator(animated: true)
         let jsonUrl = "https://newsapi.org/v2/everything?q=\(searchResult)&from=2021-11-19&to=2021-11-05&sortBy=popularity&apiKey=\(apiKey)"
@@ -92,7 +92,7 @@ extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as? NewsFeedTableViewCell else {return UITableViewCell()}
         
         let item = newsItems[indexPath.row]
-        cell.titleLabel.text = item.title // viewCell names.text to 
+        cell.titleLabel.text = item.title // viewCell names.text to
         cell.titleLabel.numberOfLines = 0
         cell.articleImage.sd_setImage(with:URL(string: item.urlToImage), placeholderImage: UIImage(named: "news.png"))
         
@@ -100,8 +100,8 @@ extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         if let date = formatter.date(from: item.publishedAt) {
-        formatter.dateFormat = "dd/MM/yyyy"
-        cell.dateLabel.text = "Published at : \(formatter.string(from: date))"
+            formatter.dateFormat = "dd/MM/yyyy"
+            cell.dateLabel.text = "Published at : \(formatter.string(from: date))"
         }
         return cell
     }
@@ -119,7 +119,6 @@ extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource {
         vc.webUrlString = item.url
         vc.contentString = item.description
         
-//        present(vc, animated: true, completion: nil)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -77,10 +77,10 @@
 			isa = PBXGroup;
 			children = (
 				FC7D099827480E6A002AEAB7 /* Extention */,
-				FC7D099B27480EEC002AEAB7 /* Model */,
 				FCFB696F274A607D00A834DA /* Delegate */,
-				FCAFEAF1274843880098727B /* Controllers */,
+				FC7D099B27480EEC002AEAB7 /* Model */,
 				FCAFEAF22748443C0098727B /* View */,
+				FCAFEAF1274843880098727B /* Controllers */,
 				FC7D098D27480E1C002AEAB7 /* Assets.xcassets */,
 				FC7D099227480E1C002AEAB7 /* Info.plist */,
 				FC7D098A27480E18002AEAB7 /* NewsApiOrg.xcdatamodeld */,

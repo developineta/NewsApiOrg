@@ -21,13 +21,11 @@ class SavedTableViewController: UITableViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         managedObjectContext = appDelegate.persistentContainer.viewContext
         loadData()
-        //countItems()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         loadData()
-        //countItems()
     }
     
     @IBAction func editButtonTapped(_ sender: Any) {
@@ -61,7 +59,6 @@ class SavedTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return savedItems.count
     }
 
@@ -123,5 +120,4 @@ class SavedTableViewController: UITableViewController {
         vc.urlString = savedItems[indexPath.row].url ?? "https://blog.thomasnet.com/hs-fs/hubfs/shutterstock_774749455.jpg?width=1200&name=shutterstock_774749455.jpg"
         navigationController?.pushViewController(vc, animated: true)
     }
-
 }
